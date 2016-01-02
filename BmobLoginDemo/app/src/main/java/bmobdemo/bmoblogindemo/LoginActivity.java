@@ -1,6 +1,7 @@
 package bmobdemo.bmoblogindemo;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -18,6 +19,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     private EditText login_name;
     private EditText login_password;
     private Button login_login;
+    private Button login_signin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +33,11 @@ public class LoginActivity extends Activity implements View.OnClickListener{
        login_login= (Button) findViewById(R.id.login_login);
         login_name= (EditText) findViewById(R.id.login_name);
         login_password= (EditText) findViewById(R.id.login_password);
+        login_signin= (Button) findViewById(R.id.login_signin);
     }
     private void initData() {
         login_login.setOnClickListener(this);
+        login_signin.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +63,10 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                         Toast.makeText(LoginActivity.this,"登录失败",Toast.LENGTH_SHORT).show();
                     }
                 });
+                break;
+            case R.id.login_signin:
+                Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
                 break;
         }
     }

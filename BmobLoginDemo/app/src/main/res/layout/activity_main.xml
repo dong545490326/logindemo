@@ -30,21 +30,21 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="性别："
-            android:textSize="30sp"/>
-        <CheckBox
-            android:layout_width="150dp"
-            android:layout_height="match_parent"
-            android:text="男"
-            android:textSize="30sp"/>
-        <CheckBox
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="女"
-            android:textSize="30sp"/>
+            android:hint="年龄"
+            android:id="@+id/et_age"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="昵称"
+            android:id="@+id/et_nickname"/>
     </LinearLayout>
     <Button
         android:layout_width="wrap_content"
@@ -54,12 +54,4 @@
         android:textSize="35sp"
         android:layout_gravity="center"
         android:id="@+id/signin"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="登录"
-        android:layout_marginTop="50dp"
-        android:textSize="35sp"
-        android:layout_gravity="center"
-        android:id="@+id/login"/>
 </LinearLayout>
