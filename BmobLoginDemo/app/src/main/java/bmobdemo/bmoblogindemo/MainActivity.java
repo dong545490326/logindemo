@@ -3,6 +3,7 @@ package bmobdemo.bmoblogindemo;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -52,14 +53,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         signin = (Button) findViewById(R.id.signin);
         et_age = (EditText) findViewById(R.id.et_age);
         et_nickname = (EditText) findViewById(R.id.et_nickname);
-        cb_sex_boy = (CheckBox) findViewById(R.id.cb_sex_boy);
-        cb_sex_girl = (CheckBox) findViewById(R.id.cb_sex_girl);
+
     }
 
     private void initData() {
         signin.setOnClickListener(this);
-        cb_sex_girl.setOnClickListener(this);
-        cb_sex_boy.setOnClickListener(this);
     }
 
 
@@ -84,6 +82,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     @Override
                     public void onSuccess() {
                         Toast.makeText(MainActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                        Intent intent1=new Intent(MainActivity.this,LoginActivity.class);
+                        startActivity(intent1);
                     }
 
                     @Override

@@ -55,7 +55,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                 user.login(LoginActivity.this, new SaveListener() {
                     @Override
                     public void onSuccess() {
-                        Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                       Intent intent1=new Intent(LoginActivity.this,EditPersonActivity.class);
+                        startActivity(intent1);
                     }
 
                     @Override
